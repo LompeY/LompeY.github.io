@@ -1,0 +1,329 @@
+/* https: //fonts.google.com/specimen/Ubuntu 
+За цим посиланням беремо шрифт, в нашому випадку це Ubuntu
+Беремо набір з шрифтів з жирністю 300, 400, 700. Вони будуть застосовуватися через font-weigth:
+*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+/* Це називається файл reset, для скидання вбудованих стилів браузера. 
+Це робиться, щоб можна було точно виставити необхідні нам параметри.
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Кінець файлу reset */
+
+/* Початок написання стилів */
+
+a {
+  text-decoration: none;
+  color: #0000008A;
+  font-size: 16px;
+}
+
+.logo{
+  height: 100px;
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.container{
+  box-sizing: border-box;
+  max-width: 1200px;
+  /* Центруємо весь блок div, в якому знаходяться всі елементи по центру вікна браузера */
+  margin: 0 auto;
+}
+
+/* start header */
+
+.header-info {
+  background-image: url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fcfcfc;
+  padding: 150px 120px;
+}
+
+.header-text_container{
+  max-width: 600px;
+}
+
+.header-main_text{
+  font-size: 56px;
+  line-height: 56px;
+  font-family: Ubuntu, sans-serif;
+  color: #75af26;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.header-text {
+  font-size: 20px;
+  letter-spacing: 0.15px;
+  font-family: Ubuntu, sans-serif;
+  color: #000;
+  font-weight: 400;
+}
+
+/* end header */
+/* start main */
+.main-container{
+  background-color: #f4f4f4;
+  padding: 30px 40px 120px;
+  margin: 0 auto;
+  border-bottom: 1px solid #d8d8d8
+}
+
+.main-text{
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: .05px;
+  line-height: 40px;
+  margin-bottom: 42px;
+}
+
+.slick-container{
+  margin-left: 50px;
+}
+
+.slick-container img {
+  max-width: 300px;
+}
+
+.product-list{
+  max-width: 300px;
+}
+
+.product-item p{
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.product-item{
+  max-width: 300px;
+  background-color: rgba(231, 231, 231, 0.8);
+  border-radius: 10px;
+}
+
+.product-item:hover {
+  background-position: 0 0;
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 10px;
+  position: relative;
+  transform: translateY(-10px);
+  transition: fill 1s linear;
+  z-index: 1;
+}
+
+.col-svg {
+  padding-left: 10px;
+}
+
+.slick-item :hover p{
+  color: #fff;
+}
+
+.slick-item :hover .svg-hover  {
+  fill: #fff;
+}
+
+.text-center{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  padding-top: 30px;
+  margin-right: 25px;
+}
+
+.product-img{
+  padding-bottom: 20px;
+}
+
+.product-img img {
+  cursor: pointer;
+}
+.row-no-padding{
+  display: flex;
+  max-width: 280px;
+}
+
+
+
+.btn{
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  font-family: Ubuntu, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #75af26;
+}
+
+.btn:hover{
+  color: #fff;
+}
+
+/* end main */
+
+/* footer */
+
+.footer-container{
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 80px 40px 100px 40px;
+}
+
+.footer-header{
+  font-family: Ubuntu, sans-serif;
+  font-size: 24px;
+}
+
+.footer-container p {
+    color: rgba(0,0,0,.54);
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+
+.footer-container li {
+  margin-bottom: 10px;
+}
+
+.left-col{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-col ul li{
+  list-style-type: none;
+  margin: 15px 0;
+}
+
+.left-col div {
+  padding-right:70px;
+  padding-bottom: 20px;
+}
+
+
+.phones{
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 20px;
+  
+}
+
+
+.phones-item-first{
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.call-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.phones-item-second{
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.phones-item-second img{
+  width: 56px;
+  height: 56px;
+}
+
+.right-col{
+  margin-left: 50px;
+}
+
+.prepositions {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.btn-secondary{
+  cursor: pointer;
+  background: none;
+  border: 1px solid #979797;
+  border-radius: 27px;
+  color: #282828;
+  font-size: 13px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .36px;
+  line-height: 18px;
+  padding: 4px 20px;
+  text-align: center;
+}
+
+.btn-secondary:hover{
+  background: #5a9310;
+    border-color: #5a9310;
+    color: #fff;
+    transition: all .2s;
+}
+
+.terms{
+  display: flex;
+}
+
+/* end footer */
